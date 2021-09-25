@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <title>Document</title>   -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/nouislider.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='css/jquery.mCustomScrollbar.css' />
+    <!-- <link rel="stylesheet" href="css/swiper-bundle.min.css">   -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+
+    <!-- <script src="js/jquery-1.11.3.min.js"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/6.4.0/adapter.min.js"></script>
+    <!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script> -->
+    <!-- <script src="js/script.js"></script> -->
+    <title>Сдача бухгалтерской отчётности</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="content">
+            <header class='header'>
+                <div class="header__top">
+                    <div class="container">
+                        <div class="header__top-inner">
+                            <div class="header__left">
+                                <div class="header__address">
+                                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.02 12.03"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M298.07,414.76a4.51,4.51,0,0,0-4.51,4.51c0,2.9,3.25,6.51,3.76,7.07a.86.86,0,0,0,1.51,0c.51-.56,3.75-4.17,3.75-7.07A4.5,4.5,0,0,0,298.07,414.76Zm0,7.52a3,3,0,1,1,3-3A3,3,0,0,1,298.07,422.28Zm0-4.51a1.51,1.51,0,0,0,0,3,1.51,1.51,0,1,0,0-3Z" transform="translate(-293.56 -414.76)"/></svg>
+                                    <span>Южно-Сахалинск</span>
+                                </div>
+                                <div class="header__address-info">Работаем по всей России</div>
+                            </div>
+                            <div class="header__center">
+                                <a href="tel:+7 914 740 8297" class="header__phone">
+                                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.1 13.17"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M293.53,420.78v-5a1.52,1.52,0,0,1,1.58-1.59h6a1.51,1.51,0,0,1,1.54,1.55v10.08a1.51,1.51,0,0,1-1.53,1.54h-6a1.51,1.51,0,0,1-1.53-1.54Zm3-5.57h-1.42a.52.52,0,0,0-.59.59v10a.52.52,0,0,0,.58.59H301c.43,0,.61-.19.61-.62v-9.4c0-.21,0-.42,0-.63a.49.49,0,0,0-.43-.49H299.6a.25.25,0,0,0,0,.08,1,1,0,0,1-1,.93h-1a1,1,0,0,1-.63-.22A1.08,1.08,0,0,1,296.55,415.21Z" transform="translate(-293.53 -414.19)"/></svg>
+                                    <span>+7 914 740 8297</span>
+                                </a>
+                                <a href="" class="header__whatsapp">
+                                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.68 11.68"><defs><style>.cls-1{fill:#eb5b1d;}</style></defs><path class="cls-1" d="M303.91,420.73a5.83,5.83,0,0,1-5.84,5.78h0a5.81,5.81,0,0,1-2.77-.7l-3.06.8.82-3a5.8,5.8,0,1,1,10.85-2.89Zm-1,0a4.82,4.82,0,0,0-1.47-3.4,4.75,4.75,0,0,0-3.4-1.41,4.8,4.8,0,0,0-4.07,7.36l.11.19-.48,1.77,1.82-.48.17.11a4.8,4.8,0,0,0,2.45.67A4.87,4.87,0,0,0,302.94,420.73Zm-2,1.38a1.17,1.17,0,0,1-.08.69,1.51,1.51,0,0,1-1,.68,2.79,2.79,0,0,1-1.74-.36,6.52,6.52,0,0,1-2.47-2.18,2.87,2.87,0,0,1-.59-1.5,1.57,1.57,0,0,1,.51-1.2.49.49,0,0,1,.38-.18h.28c.09,0,.21,0,.32.25s.41,1,.45,1.07a.25.25,0,0,1,0,.25c-.27.56-.57.54-.42.79a3.86,3.86,0,0,0,2,1.72c.15.08.23.06.32,0s.36-.42.46-.57.19-.12.32-.07.85.39,1,.47S301,422,301,422.11Z" transform="translate(-292.24 -414.94)"/></svg>
+                                    <span>WhatsApp</span>
+                                </a>
+                            </div>
+                            <!-- <div class="header__right">
+							<div class="header__work-title">график работы:</div>
+							<div class="header__work">
+							   <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.16 12.17"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M298.09,414.7a6.08,6.08,0,1,0,6.06,6.09A6.08,6.08,0,0,0,298.09,414.7Zm0,11.06a5,5,0,1,1,5-5A5,5,0,0,1,298.09,425.76Z" transform="translate(-291.99 -414.7)"/><path class="cls-1" d="M298.72,420.64a.26.26,0,0,1-.1-.22v-2.89a.9.9,0,0,0,0-.28.55.55,0,0,0-.62-.33.56.56,0,0,0-.44.55v1.65c0,.52,0,1,0,1.56a.72.72,0,0,0,.23.57l.86.85.7.7a.55.55,0,1,0,.78-.78Z" transform="translate(-291.99 -414.7)"/></svg>
+							   <span>будни с 10 до 20</span>
+							</div>
+							<div class="header__time-title">текущее время:</div>
+							<div class="header__time">10:45</div>
+						 </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="header__bottom">
+                    <div class="container">
+                        <div class="header__bottom-inner">
+                            <a href="index.php" class="header__logo">
+                                <img src="images/svg/logo.svg" alt="">
+                            </a>
+                            <nav class="header__nav nav">
+                                <ul class="nav__list" data-mcs-theme='dark'>
+
+                                    <li class="nav__item nav__item-open">
+                                        <div class="nav__item-show">
+                                            <span>О компании</span>
+                                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="nav__item-hidden nav__item-hidden--nosub">
+                                            <div class="nav__item-hidden-inner">
+                                                <a href="">
+                                                    <span>История компании</span>
+                                                    <i class="fa mob-show fa-chevron-right" aria-hidden="true"></i>
+                                                </a>
+                                                <a href="">
+                                                    <span>Наша команда</span>
+                                                    <i class="fa mob-show fa-chevron-right" aria-hidden="true"></i>
+                                                </a>
+                                                <a href="">
+                                                    <span>Название подстраницы <br>внутри раздела</span>
+                                                    <i class="fa mob-show fa-chevron-right" aria-hidden="true"></i>
+                                                </a>
+                                                <a href="">
+                                                    <span>Контакты</span>
+                                                    <i class="fa mob-show fa-chevron-right" aria-hidden="true"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav__item nav__item-open">
+                                        <div class="nav__item-show">
+                                            <span>Услуги</span>
+                                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="nav__item-hidden nav__item-hidden--nosub">
+                                            <div class="nav__item-hidden-inner">
+
+
+                                                <div class="nav__item-sub">
+                                                    <span>Бухгалтерские услуги</span>
+                                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                                    <div class="nav__item-submenu">
+                                                        <a href="">Ведение бухгалтерского и <br> налогового учета</a>
+                                                        <a href="">Консультирование аудитора и <br> налогового юриста</a>
+                                                        <a href="">Проведение экспресс-аудита и <br> восстановление учета</a>
+                                                        <a href="">Расчет заработной платы и <br> кадровое делопроизводство</a>
+                                                        <a href="">Сопровождение и настройка <br> 1С Предприятие</a>
+                                                        <a href="">Услуги инвестиционного и <br> финансового консалтинга</a>
+                                                    </div>
+                                                </div>
+                                                <div class="nav__item-sub">
+                                                    <span>Кадровое <br> делопроизводство</span>
+                                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                                    <div class="nav__item-submenu">
+                                                        <a href="">Ведение бухгалтерского и <br> налогового учета</a>
+                                                        <a href="">Консультирование аудитора и <br> налогового юриста</a>
+                                                        <a href="">Проведение экспресс-аудита и <br> восстановление учета</a>
+                                                        <a href="">Расчет заработной платы и <br> кадровое делопроизводство</a>
+                                                        <a href="">Сопровождение и настройка <br> 1С Предприятие</a>
+                                                        <a href="">Услуги инвестиционного и <br> финансового консалтинга</a>
+                                                    </div>
+                                                </div>
+                                                <div class="nav__item-sub">
+                                                    <span>Налоговое <br> сопровождение</span>
+                                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                                    <div class="nav__item-submenu">
+                                                        <a href="">Ведение бухгалтерского и <br> налогового учета</a>
+                                                        <a href="">Консультирование аудитора и <br> налогового юриста</a>
+                                                        <a href="">Проведение экспресс-аудита и <br> восстановление учета</a>
+                                                        <a href="">Расчет заработной платы и <br> кадровое делопроизводство</a>
+                                                        <a href="">Сопровождение и настройка <br> 1С Предприятие</a>
+                                                        <a href="">Услуги инвестиционного и <br> финансового консалтинга</a>
+                                                    </div>
+                                                </div>
+                                                <div class="nav__item-sub">
+                                                    <span>Автоматизация учета</span>
+                                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                                    <div class="nav__item-submenu">
+                                                        <a href="">Ведение бухгалтерского и <br> налогового учета</a>
+                                                        <a href="">Консультирование аудитора и <br> налогового юриста</a>
+                                                        <a href="">Проведение экспресс-аудита и <br> восстановление учета</a>
+                                                        <a href="">Расчет заработной платы и <br> кадровое делопроизводство</a>
+                                                        <a href="">Сопровождение и настройка <br> 1С Предприятие</a>
+                                                        <a href="">Услуги инвестиционного и <br> финансового консалтинга</a>
+                                                    </div>
+                                                </div>
+                                                <div class="nav__item-sub">
+                                                    <span>Регистрационные <br>                        услуги</span>
+                                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                                    <div class="nav__item-submenu">
+                                                        <a href="">Ведение бухгалтерского и <br> налогового учета</a>
+                                                        <a href="">Консультирование аудитора и <br> налогового юриста</a>
+                                                        <a href="">Проведение экспресс-аудита и <br> восстановление учета</a>
+                                                        <a href="">Расчет заработной платы и <br> кадровое делопроизводство</a>
+                                                        <a href="">Сопровождение и настройка <br> 1С Предприятие</a>
+                                                        <a href="">Услуги инвестиционного и <br> финансового консалтинга</a>
+                                                    </div>
+                                                </div>
+                                                <div class="nav__item-sub">
+                                                    <span>Юридические услуги</span>
+                                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                                    <div class="nav__item-submenu">
+                                                        <a href="">Ведение бухгалтерского и <br> налогового учета</a>
+                                                        <a href="">Консультирование аудитора и <br> налогового юриста</a>
+                                                        <a href="">Проведение экспресс-аудита и <br> восстановление учета</a>
+                                                        <a href="">Расчет заработной платы и <br> кадровое делопроизводство</a>
+                                                        <a href="">Сопровождение и настройка <br> 1С Предприятие</a>
+                                                        <a href="">Услуги инвестиционного и <br> финансового консалтинга</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav__item"> <a href="#">ВИРТУАЛЬНЫЙ ОФИС</a> </li>
+                                    <li class="nav__item"> <a href="#">Вопрос-ответ</a> </li>
+                                    <li class="nav__item"> <a href="#">Контакты</a> </li>
+                                </ul>
+                                <button class="header__btn">ЗАДАТЬ ВОПРОС</button>
+                                <div class="header__right">
+                                    <div>
+                                        <div class="header__work-title">график работы:</div>
+                                        <div class="header__work">
+                                            <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.16 12.17"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M298.09,414.7a6.08,6.08,0,1,0,6.06,6.09A6.08,6.08,0,0,0,298.09,414.7Zm0,11.06a5,5,0,1,1,5-5A5,5,0,0,1,298.09,425.76Z" transform="translate(-291.99 -414.7)"/><path class="cls-1" d="M298.72,420.64a.26.26,0,0,1-.1-.22v-2.89a.9.9,0,0,0,0-.28.55.55,0,0,0-.62-.33.56.56,0,0,0-.44.55v1.65c0,.52,0,1,0,1.56a.72.72,0,0,0,.23.57l.86.85.7.7a.55.55,0,1,0,.78-.78Z" transform="translate(-291.99 -414.7)"/></svg>
+                                            <span>будни с 10 до 20</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="header__time-title">текущее время:</div>
+                                        <div class="header__time">10:45</div>
+                                    </div>
+                                </div>
+                            </nav>
+
+                            <button class="header__mail">
+							<img src="images/svg/popup-sendok.svg" alt="">
+						 </button>
+                            <div class="header__burger ">
+                                <button><span></span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </header>
+
+
+
+
+            <section class='service-list'>
+                <div class='container'>
+                    <div class='service-list__inner'>
+                        <aside>
+                            <div class="service-list__menu">
+                                <div class="service-list__menu-top">
+                                    <div class="service-list__menu-burger">
+                                        <span></span>
+                                    </div>
+                                    УСЛУГИ
+                                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                </div>
+                                <div class="service-list__menu-items">
+                                    <div class="service-list__menu-item">
+                                        <div class="service-list__menu-item-show">
+                                            <span>Бухгалтерские услуги</span>
+                                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="service-list__menu-item-hidden ">
+                                            <a href="">Ведение бухгалтерского и налогового учета</a>
+                                            <a href="">Консультирование аудитора и налогового юриста</a>
+                                            <a href="">Проведение экспресс-аудита и восстановление учета</a>
+                                            <a href="">Расчет заработной платы и кадровое делопроизводство</a>
+                                            <a href="">Сопровождение и настройка 1С Предприятие</a>
+                                            <a href="">Услуги инвестиционного и финансового консалтинга</a>
+                                        </div>
+                                    </div>
+                                    <div class="service-list__menu-item">
+                                        <div class="service-list__menu-item-show">
+                                            <span>Кадровое <br> делопроизводство</span>
+                                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="service-list__menu-item-hidden">
+                                            <a href="">Ведение бухгалтерского и налогового учета</a>
+                                            <a href="">Консультирование аудитора и налогового юриста</a>
+                                            <a href="">Проведение экспресс-аудита и восстановление учета</a>
+                                            <a href="">Расчет заработной платы и кадровое делопроизводство</a>
+                                            <a href="">Сопровождение и настройка 1С Предприятие</a>
+                                            <a href="">Услуги инвестиционного и финансового консалтинга</a>
+                                        </div>
+                                    </div>
+                                    <div class="service-list__menu-item">
+                                        <div class="service-list__menu-item-show">
+                                            <span>Налоговое <br> сопровождение</span>
+                                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="service-list__menu-item-hidden">
+                                            <a href="">Ведение бухгалтерского и налогового учета</a>
+                                            <a href="">Консультирование аудитора и налогового юриста</a>
+                                            <a href="">Проведение экспресс-аудита и восстановление учета</a>
+                                            <a href="">Расчет заработной платы и кадровое делопроизводство</a>
+                                            <a href="">Сопровождение и настройка 1С Предприятие</a>
+                                            <a href="">Услуги инвестиционного и финансового консалтинга</a>
+                                        </div>
+                                    </div>
+                                    <div class="service-list__menu-item">
+                                        <div class="service-list__menu-item-show">
+                                            <span>Автоматизация учета</span>
+                                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="service-list__menu-item-hidden">
+                                            <a href="">Ведение бухгалтерского и налогового учета</a>
+                                            <a href="">Консультирование аудитора и налогового юриста</a>
+                                            <a href="">Проведение экспресс-аудита и восстановление учета</a>
+                                            <a href="">Расчет заработной платы и кадровое делопроизводство</a>
+                                            <a href="">Сопровождение и настройка 1С Предприятие</a>
+                                            <a href="">Услуги инвестиционного и финансового консалтинга</a>
+                                        </div>
+                                    </div>
+                                    <div class="service-list__menu-item">
+                                        <div class="service-list__menu-item-show">
+                                            <span>Регистрационные <br> услуги</span>
+                                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="service-list__menu-item-hidden">
+                                            <a href="">Ведение бухгалтерского и налогового учета</a>
+                                            <a href="">Консультирование аудитора и налогового юриста</a>
+                                            <a href="">Проведение экспресс-аудита и восстановление учета</a>
+                                            <a href="">Расчет заработной платы и кадровое делопроизводство</a>
+                                            <a href="">Сопровождение и настройка 1С Предприятие</a>
+                                            <a href="">Услуги инвестиционного и финансового консалтинга</a>
+                                        </div>
+                                    </div>
+                                    <div class="service-list__menu-item">
+                                        <div class="service-list__menu-item-show">
+                                            <span>Юридические услуги</span>
+                                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="service-list__menu-item-hidden">
+                                            <a href="">Ведение бухгалтерского и налогового учета</a>
+                                            <a href="">Консультирование аудитора и налогового юриста</a>
+                                            <a href="">Проведение экспресс-аудита и восстановление учета</a>
+                                            <a href="">Расчет заработной платы и кадровое делопроизводство</a>
+                                            <a href="">Сопровождение и настройка 1С Предприятие</a>
+                                            <a href="">Услуги инвестиционного и финансового консалтинга</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </aside>
+                        <main>
+                            <div class="breadcrumbs breadcrumbs-noborder">
+                                <h1 class="breadcrumbs__title">Сдача бухгалтерской отчётности</h1>
+                                <div class='breadcrumbs__wrap'>
+                                    <a class='breadcrumbs__item' href='index.php'>
+										Главная
+									</a>
+                                    <a class='breadcrumbs__item' href='index.php'>
+										Услуги
+									</a>
+                                    <a class='breadcrumbs__item' href="">
+										Бухгалтерские услуги
+									</a>
+                                    <span class='breadcrumbs__item'>
+										Сдача бухгалтерской отчётности
+									</span>
+
+                                </div>
+                            </div>
+
+
+                            <div class="text__inner text__inner--bor">
+                                <p class="text__p">Согласно постановлению Правительства РФ, предсознательное умышленно отчуждает возрастной аккредитив, что не имеет аналогов в англо-саксонской правовой системе. В самом общем случае инсайт жизненно интегрирует методологический
+                                    Указ. <a href="">Товарный кредит</a> , как можно доказать с помощью не совсем тривиальных допущений, добросовестно использует филосовский эгоцентризм. Банкротство, несмотря на <a href="">внешние воздействия</a>, косвенно
+                                    формирует нормативный тест. Объект, несмотря на некоторую вероятность дефолта, дает генезис, когда речь идет об ответственности юридического лица.</p>
+                                <h2 class="text__h2">Профессиональные бухгалтерские услуги — максимальная выгода для вашего бизнеса H2</h2>
+                                <p class="text__p">Комплекс осознаёт сервитут. Фрустрация начинает конформизм. Если рассмотреть все принятые в последнее время нормативные акты, то видно, что ставка рефинансирования конфронтально отражает международный умысел.</p>
+                                <h3 class="text__h3">H3 подзаголовок внутри текста</h3>
+                                <p class="text__p">Бессознательное последовательно. Психоанализ, конечно, выбирает комплекс. Фирменное наименование, несмотря на некоторую вероятность дефолта, императивно. Филогенез опровергает регрессный закон. Преступление пространственно
+                                    защищает казенный товарный кредит.</p>
+
+                                <h4 class="text__h4">Подзаголовок внутренний h4 уровня</h4>
+                                <p class="text__p">Установка параллельна. Акционерное общество, как можно доказать с помощью не совсем тривиальных допущений, выбирает индивидуальный импульс. Психоз начинает платежный документ одинаково по всем направлениям. Лидерство субъективно
+                                    дает причиненный ущерб. Фрахтование наследуемо.</p>
+                                <p class="text__p mt-8">Мышление однородно представляет собой виновный гештальт. Однако, исследователи постоянно сталкиваются с тем, что лидерство изящно отталкивает индоссированный Кодекс. Норма защищает вексель, хотя этот факт нуждается в дальнейшей
+                                    проверке наблюдением. Мышление по определению обязывает контраст.</p>
+                                <p class="text__ul-title">Маркированный список для примера</p>
+                                <ul class="text__ul">
+                                    <li class="text__ul-item"><i class="fa fa-caret-right" aria-hidden="true"></i> Бухгалтерское обслуживание</li>
+                                    <li class="text__ul-item"><i class="fa fa-caret-right" aria-hidden="true"></i> Разовая отчётность</li>
+                                    <li class="text__ul-item"><i class="fa fa-caret-right" aria-hidden="true"></i> Восстановление учёта</li>
+                                    <li class="text__ul-item"><i class="fa fa-caret-right" aria-hidden="true"></i> Оптимизация налогов</li>
+                                    <li class="text__ul-item"><i class="fa fa-caret-right" aria-hidden="true"></i> Порядок тарификации</li>
+                                    <li class="text__ul-item"><i class="fa fa-caret-right" aria-hidden="true"></i> Документы</li>
+                                    <li class="text__ul-item"><i class="fa fa-caret-right" aria-hidden="true"></i> Нумерованный список для примера</li>
+                                </ul>
+                                <p class="text__ol-title">Нумерованный список для примера</p>
+                                <ol class="text__ol">
+                                    <li class="text__ol-item">1. Бухгалтерское обслуживание</li>
+                                    <li class="text__ol-item">2. Разовая отчётность</li>
+                                    <li class="text__ol-item">3. Восстановление учёта</li>
+                                    <li class="text__ol-item">4. Оптимизация налогов</li>
+                                    <li class="text__ol-item">5. Порядок тарификации</li>
+                                    <li class="text__ol-item">6. Документы</li>
+                                </ol>
+
+                            </div>
+
+                            <div class="service-list__docs">
+                                <div class="service-list__docs-title">
+                                    <span>ПОЛЕЗНЫЕ ДОКУМЕНТЫ</span>
+                                </div>
+                                <div class="service-list__docs-items">
+                                    <a href="" class="service-list__docs-item">
+                                        <div class="service-list__docs-item-inner">
+                                            <svg class="first" width="15" height="18" id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.81 17.75"><defs><style>.cls-1{fill:#1c2f45;}</style></defs><rect class="cls-1" x="3.59" y="4.45" width="7.63" height="1.11"/><rect class="cls-1" x="3.59" y="7.11" width="7.63" height="1.11"/><path class="cls-1" d="M305.11,411.9H291.05a.37.37,0,0,0-.37.37v12.32s0,.07,0,.11a3.58,3.58,0,0,0,3.12,3.55h0l11,1.39a.74.74,0,0,0,.74-.74V412.27A.37.37,0,0,0,305.11,411.9Zm-1.48,15.61-7.34-4.3c-.17-.11-.31,0-.31.17v1.26h0v.06a1.72,1.72,0,0,1-1.73,1.73,1.67,1.67,0,0,1-1.72-1.67.41.41,0,0,0,0-.11v-10.9h11.1Z" transform="translate(-290.67 -411.9)"/></svg>
+                                            <span>Бланк типового договора с контрагентом</span>
+                                            <svg class="last" width="14" height="13" id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.95 11.63"><defs><style>.cls-1{fill:#1c2f45;}</style></defs><path class="cls-1" d="M299.84,423.53l-1.33,1.33V421a.58.58,0,0,0-1.16,0v3.82L296,423.53a.58.58,0,0,0-.82.82l2.32,2.33a.62.62,0,0,0,.19.12.59.59,0,0,0,.22.05.54.54,0,0,0,.22-.05.52.52,0,0,0,.19-.12l2.33-2.33a.59.59,0,0,0,0-.82A.59.59,0,0,0,299.84,423.53Z" transform="translate(-290.95 -415.22)"/><path class="cls-1" d="M304.27,420.19a3.51,3.51,0,0,0-2.85-1.48h-.3a5.23,5.23,0,0,0-9.44-.92,5.22,5.22,0,0,0,.59,6.12.57.57,0,0,0,.82,0,.58.58,0,0,0,.05-.82,3.91,3.91,0,0,1-.89-1.68,4.06,4.06,0,1,1,7.87-2,.58.58,0,0,0,.57.43h.73a2.33,2.33,0,0,1,1.34,4.23.58.58,0,1,0,.66.95A3.48,3.48,0,0,0,304.27,420.19Z" transform="translate(-290.95 -415.22)"/></svg>
+                                        </div>
+
+                                    </a>
+                                    <a href="" class="service-list__docs-item">
+                                        <div class="service-list__docs-item-inner">
+                                            <svg class="first" width="15" height="18" id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.81 17.75"><defs><style>.cls-1{fill:#1c2f45;}</style></defs><rect class="cls-1" x="3.59" y="4.45" width="7.63" height="1.11"/><rect class="cls-1" x="3.59" y="7.11" width="7.63" height="1.11"/><path class="cls-1" d="M305.11,411.9H291.05a.37.37,0,0,0-.37.37v12.32s0,.07,0,.11a3.58,3.58,0,0,0,3.12,3.55h0l11,1.39a.74.74,0,0,0,.74-.74V412.27A.37.37,0,0,0,305.11,411.9Zm-1.48,15.61-7.34-4.3c-.17-.11-.31,0-.31.17v1.26h0v.06a1.72,1.72,0,0,1-1.73,1.73,1.67,1.67,0,0,1-1.72-1.67.41.41,0,0,0,0-.11v-10.9h11.1Z" transform="translate(-290.67 -411.9)"/></svg>
+                                            <span>Название документа для примера публикации внутри услуги</span>
+                                            <svg class="last" width="14" height="13" id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.95 11.63"><defs><style>.cls-1{fill:#1c2f45;}</style></defs><path class="cls-1" d="M299.84,423.53l-1.33,1.33V421a.58.58,0,0,0-1.16,0v3.82L296,423.53a.58.58,0,0,0-.82.82l2.32,2.33a.62.62,0,0,0,.19.12.59.59,0,0,0,.22.05.54.54,0,0,0,.22-.05.52.52,0,0,0,.19-.12l2.33-2.33a.59.59,0,0,0,0-.82A.59.59,0,0,0,299.84,423.53Z" transform="translate(-290.95 -415.22)"/><path class="cls-1" d="M304.27,420.19a3.51,3.51,0,0,0-2.85-1.48h-.3a5.23,5.23,0,0,0-9.44-.92,5.22,5.22,0,0,0,.59,6.12.57.57,0,0,0,.82,0,.58.58,0,0,0,.05-.82,3.91,3.91,0,0,1-.89-1.68,4.06,4.06,0,1,1,7.87-2,.58.58,0,0,0,.57.43h.73a2.33,2.33,0,0,1,1.34,4.23.58.58,0,1,0,.66.95A3.48,3.48,0,0,0,304.27,420.19Z" transform="translate(-290.95 -415.22)"/></svg>
+                                        </div>
+
+                                    </a>
+                                </div>
+                                <a href="" class="service-list__docs-back">
+                                    <svg width="11" height="12" id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.93 12.3"><defs><style>.cls-1{fill:#18293b;}</style></defs><path class="cls-1" d="M303.15,414.72a.68.68,0,0,0-.72.08l-6.83,5.47a.67.67,0,0,0-.26.53.68.68,0,0,0,.26.53l6.83,5.47a.68.68,0,0,0,.43.15.59.59,0,0,0,.29-.07.67.67,0,0,0,.39-.62V415.33A.67.67,0,0,0,303.15,414.72Zm-1,10.12-5.05-4,5.05-4.05Z" transform="translate(-292.61 -414.65)"/><path class="cls-1" d="M293.29,415.33a.68.68,0,0,0-.68.69v9.56a.67.67,0,0,0,.68.68.68.68,0,0,0,.69-.68V416A.69.69,0,0,0,293.29,415.33Z" transform="translate(-292.61 -414.65)"/></svg>
+                                    <span>вернуться к списку услуг</span>
+                                </a>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </section>
+
+            <section class="consultation consultation--contact">
+                <div class="container">
+                    <div class="consultation__inner">
+                        <div class="consultation__left">
+                            <p class="consultation__title">Бесплатная <br> консультация</p>
+                            <p class="consultation__subtitle">нашего ведущего специалиста</p>
+                            <p class="consultation__desc">Это бесплатно и ни к чему вас не обязывает. <br>Отвечать на ваши вопросы, наша работа.</p>
+                            <p class="consultation__info">Срочные вопросы вы всегда можете задать <br>по телефону, или написать их в WhatsApp</p>
+                            <div class="consultation__phones">
+                                <a href="tel:+79147408297" class="consultation__phone">
+                                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.1 13.17"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M293.53,420.78v-5a1.52,1.52,0,0,1,1.58-1.59h6a1.51,1.51,0,0,1,1.54,1.55v10.08a1.51,1.51,0,0,1-1.53,1.54h-6a1.51,1.51,0,0,1-1.53-1.54Zm3-5.57h-1.42a.52.52,0,0,0-.59.59v10a.52.52,0,0,0,.58.59H301c.43,0,.61-.19.61-.62v-9.4c0-.21,0-.42,0-.63a.49.49,0,0,0-.43-.49H299.6a.25.25,0,0,0,0,.08,1,1,0,0,1-1,.93h-1a1,1,0,0,1-.63-.22A1.08,1.08,0,0,1,296.55,415.21Z" transform="translate(-293.53 -414.19)"></path></svg>
+                                    <span>+7 914 740 8297</span>
+                                </a>
+                                <a href="" class="consultation__whatsapp">
+                                    <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.68 11.68"><defs><style>.cls-1{fill:#eb5b1d;}</style></defs><path class="cls-1" d="M303.91,420.73a5.83,5.83,0,0,1-5.84,5.78h0a5.81,5.81,0,0,1-2.77-.7l-3.06.8.82-3a5.8,5.8,0,1,1,10.85-2.89Zm-1,0a4.82,4.82,0,0,0-1.47-3.4,4.75,4.75,0,0,0-3.4-1.41,4.8,4.8,0,0,0-4.07,7.36l.11.19-.48,1.77,1.82-.48.17.11a4.8,4.8,0,0,0,2.45.67A4.87,4.87,0,0,0,302.94,420.73Zm-2,1.38a1.17,1.17,0,0,1-.08.69,1.51,1.51,0,0,1-1,.68,2.79,2.79,0,0,1-1.74-.36,6.52,6.52,0,0,1-2.47-2.18,2.87,2.87,0,0,1-.59-1.5,1.57,1.57,0,0,1,.51-1.2.49.49,0,0,1,.38-.18h.28c.09,0,.21,0,.32.25s.41,1,.45,1.07a.25.25,0,0,1,0,.25c-.27.56-.57.54-.42.79a3.86,3.86,0,0,0,2,1.72c.15.08.23.06.32,0s.36-.42.46-.57.19-.12.32-.07.85.39,1,.47S301,422,301,422.11Z" transform="translate(-292.24 -414.94)"></path></svg>
+                                    <span>WhatsApp</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="consultation__right">
+                            <form class="consultation__form" action="">
+                                <div class="consultation__form-grid">
+                                    <select name="" style="display: none;">
+									<option data-display="Выберите форму вашей организации" value="">Выберите форму вашей организации</option>
+									<option value="">формa 1</option>
+									<option value="">формa 2</option>
+								</select>
+                                    <div class="nice-select" tabindex="0"><span class="current">Выберите форму вашей организации</span>
+                                        <ul class="list">
+                                            <li data-value="" data-display="Выберите форму вашей организации" class="option selected">Выберите форму вашей организации</li>
+                                            <li data-value="" class="option">формa 1</li>
+                                            <li data-value="" class="option">формa 2</li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" placeholder="Ваше имя">
+                                    <input type="text" placeholder="Ваш город">
+                                    <input type="email" placeholder="Электронная почта">
+                                    <input type="tel" placeholder="Номер телефона">
+                                    <textarea placeholder="Ваше вопрос..."></textarea>
+                                </div>
+                                <div class="consultation__form-footer">
+                                    <button class="consultation__form-btn">ОТПРАВИТЬ ВОПРОС</button>
+                                    <div class="consultation__form-agree">Нажимая кнопку “Отправить вопрос” вы принимаете <br> <a href="">пользовательское соглашение</a> на обработку персональной <br> информации</div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="clients clients--mt61">
+                <div class="container">
+                    <p class="clients__title">СРЕДИ НАШИХ КЛИЕНТОВ</p>
+                    <div class="clients__items">
+                        <a class="clients__item" href=""><img src="images/client1.png" alt=""></a>
+                        <a class="clients__item" href=""><img src="images/client2.png" alt=""></a>
+                        <a class="clients__item" href=""><img src="images/client3.png" alt=""></a>
+                        <a class="clients__item" href=""><img src="images/client4.png" alt=""></a>
+                        <a class="clients__item" href=""><img src="images/client5.png" alt=""></a>
+                        <a class="clients__item" href=""><img src="images/client6.png" alt=""></a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__col">
+                        <div class="footer__logo-block">
+                            <a href="#" class="footer__logo">
+                                <img src="images/svg/footer-logo.svg" alt="">
+                            </a>
+                            <span>бухгалтерские услуги <br>для вашего бизнеса</span>
+                        </div>
+                        <div class="footer__site-by">
+                            Разработка сайта - <a href="http://www.kefirok.ru" target="_blank">Студия Кефирок</a>
+                        </div>
+
+                    </div>
+                    <div class="footer__col">
+                        <p class="footer__buh">© 2020 БухМейстер - бухгалтерское агентство.</p>
+                        <div class="footer__ip">
+                            ИП Бойко Ольга Николаевна <br> ИНН 253602928694 | ОГРНИП 315253600007115
+                        </div>
+                        <a href="" class="footer__agree">Политика конфиденциальности</a>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__address-block">
+                            <p class="footer__address-title">Офис в Южно-Сахалинске</p>
+                            <div class="footer__address">
+                                <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.68 11.89"><defs><style>.cls-1{fill:#eb5b1d;}</style></defs><path class="cls-1" d="M298,426.89c-.18-.44-.35-.86-.53-1.27-.29-.71-.59-1.41-.89-2.12a.25.25,0,0,0-.13-.12,4.34,4.34,0,0,1,.81-8.32,4.33,4.33,0,0,1,2.33,8.3.29.29,0,0,0-.18.18c-.44,1.07-.89,2.14-1.34,3.21A.88.88,0,0,0,298,426.89Zm0-4.41a3.16,3.16,0,1,0-3.15-3.15A3.14,3.14,0,0,0,298,422.48Z" transform="translate(-293.67 -414.99)"/></svg>
+                                <span>Южно-Сахалинск, Большая Елань, <br>ул. Ленина, 441а, 1​317/ 1 офис, 3 этаж</span>
+                            </div>
+                        </div>
+                        <div class="footer__phone-block">
+                            <a href="tel:+79147408297" class="footer__phone">
+                                <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.09 13.16"><defs><style>.cls-1{fill:#eb5b1d;}</style></defs><path class="cls-1" d="M293.53,420.78v-5a1.52,1.52,0,0,1,1.58-1.59h6a1.52,1.52,0,0,1,1.55,1.56v10.07a1.51,1.51,0,0,1-1.53,1.54h-6a1.51,1.51,0,0,1-1.53-1.54Zm3-5.57h-1.42a.52.52,0,0,0-.59.59v10a.51.51,0,0,0,.58.58H301c.43,0,.61-.18.61-.61v-9.39c0-.22,0-.43,0-.64a.47.47,0,0,0-.43-.48c-.53,0-1.05,0-1.58,0a.31.31,0,0,0,0,.09,1,1,0,0,1-1,.92h-1a1,1,0,0,1-.63-.22A1.08,1.08,0,0,1,296.55,415.21Z" transform="translate(-293.53 -414.19)"/></svg>
+                                <span>+7 914 740 8297</span>
+                            </a>
+                            <a href="#" class="footer__whatsapp">
+                                <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.25 12.25"><defs><style>.cls-1{fill:#eb5b1d;}</style></defs><path class="cls-1" d="M304.2,420.72a6.12,6.12,0,0,1-6.13,6.07h0a6.06,6.06,0,0,1-2.9-.73l-3.22.84.86-3.14a6.08,6.08,0,0,1,5.26-9.11,6,6,0,0,1,4.29,1.78A6.08,6.08,0,0,1,304.2,420.72Zm-1,0a5.07,5.07,0,1,0-9.37,2.69l.12.19-.51,1.86,1.91-.5.18.11a5,5,0,0,0,2.57.7A5.1,5.1,0,0,0,303.17,420.72Zm-2,1.45a1.46,1.46,0,0,1-.09.73,1.6,1.6,0,0,1-1,.72,3,3,0,0,1-1.83-.38A6.84,6.84,0,0,1,295.6,421a3.07,3.07,0,0,1-.62-1.57,1.7,1.7,0,0,1,.54-1.27.54.54,0,0,1,.4-.19h.29c.09,0,.22,0,.34.26s.43,1.05.47,1.12a.28.28,0,0,1,0,.27c-.29.58-.6.56-.44.83a4.09,4.09,0,0,0,2.06,1.8.23.23,0,0,0,.33,0c.09-.1.38-.44.48-.59s.2-.13.34-.08.89.42,1,.49S301.09,422.11,301.13,422.17Z" transform="translate(-291.95 -414.65)"/></svg>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                        <a href="" class="footer__mail">
+                            <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.03 9.74"><defs><style>.cls-1{fill:#eb5b1d;}</style></defs><path class="cls-1" d="M303.36,415.91H292.79a1.66,1.66,0,0,0-1.73,1.74v6.25a1.66,1.66,0,0,0,1.73,1.74h10.6a1.65,1.65,0,0,0,1.7-1.7v-6.29A1.66,1.66,0,0,0,303.36,415.91Zm.65,8a.55.55,0,0,1-.61.61H292.74a.55.55,0,0,1-.6-.61v-6.34a.56.56,0,0,1,.61-.62H303.4a.56.56,0,0,1,.61.62Z" transform="translate(-291.06 -415.91)"/><path class="cls-1" d="M302.47,418.09a.81.81,0,0,0-.47.16c-.72.51-1.42,1.05-2.13,1.58l-1.79,1.35-.59-.44-3.34-2.51a.58.58,0,0,0-.5-.14.55.55,0,0,0-.41.44.51.51,0,0,0,.24.55l4.16,3.13a.59.59,0,0,0,.87,0l3.11-2.33,1.09-.82a.52.52,0,0,0,.19-.59A.46.46,0,0,0,302.47,418.09Z" transform="translate(-291.06 -415.91)"/></svg>
+                            <span>info@buhmeister.ru</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/nouislider.min.js"></script>
+        <script src="js/jquery.nice-select.min.js"></script>
+        <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.fancybox.min.js"></script>
+        <script src='js/jquery.mCustomScrollbar.concat.min.js'></script>
+        <script src="js/swiper.js"></script>
+        <script src="js/index.js"></script>
+    </div>
+
+
+</body>
+
+</html>

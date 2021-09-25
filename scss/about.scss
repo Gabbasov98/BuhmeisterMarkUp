@@ -1,0 +1,39 @@
+.about {
+    margin-top: 32px;
+    &__inner {
+        @include flex;
+        @include j-c;
+    }
+    & .text {
+        width: 681px;
+        margin-top: 0;
+        &__inner {
+            margin-top: 0;
+            padding-top: 0;
+            border: none;
+        }
+    }
+    & .info__items {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .about {
+        margin-top: 17px;
+        &__inner {
+            @include wrap;
+        }
+        & .text {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        & .text {
+            padding-bottom: 26px;
+        }
+    }
+}

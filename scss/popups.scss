@@ -1,0 +1,384 @@
+.modal1 {
+    & .modal-dialog {
+        width: 550px;
+    }
+    & .modal-content {
+        border-radius: 5px;
+        position: relative;
+        border: none;
+        box-shadow: none;
+    }
+    & .modal-body {
+        padding: 0;
+    }
+    &__close {
+        z-index: 1051;
+        top: 21px;
+        right: 21px;
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        opacity: 0.5;
+        & svg {
+            .cls-1 {
+                fill: #18293b;
+            }
+        }
+        &:hover {
+            opacity: 1;
+        }
+        & span {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__title {
+        font-size: 26px;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: #ff5800;
+        padding-left: 60px;
+        padding-top: 36px;
+        padding-bottom: 27px;
+        border-bottom: 1px solid #ff5800;
+    }
+    & form {
+        padding: 31px 60px 33px;
+    }
+    & label {
+        font-size: 14px;
+        font-weight: 400;
+        color: #1d1d1b;
+        display: block;
+        margin-bottom: 15px;
+    }
+    & input {
+        width: 100%;
+        height: 43px;
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 3px;
+        padding: 0 19px;
+        font-size: 15px;
+        line-height: 16px;
+        font-weight: 400;
+        &::placeholder {
+            color: #b4b4b4;
+        }
+    }
+    & textarea {
+        width: 100%;
+        height: 131px;
+        resize: none;
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 3px;
+        padding: 5px 19px;
+        font-size: 15px;
+        line-height: 16px;
+        font-weight: 400;
+        &::placeholder {
+            color: #b4b4b4;
+        }
+    }
+    &__inputs {
+        @include flex;
+        @include j-c;
+        @include al-i(center);
+        & div {
+            &:first-child {
+                width: 161px;
+            }
+            &:last-child {
+                width: 245px;
+            }
+        }
+    }
+    &__input {
+        margin-bottom: 22px;
+    }
+    & .nice-select {
+        width: 100%;
+        border: 1px solid #e0e0e0;
+        border-radius: 3px;
+        height: 43px;
+        padding: 0;
+        margin-bottom: 22px;
+        &::after {
+            display: none;
+        }
+        &::before {
+            content: "\f107";
+            position: absolute;
+            right: 19px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: FontAwesome;
+        }
+        &.open::before {
+            transform: rotate(180deg) translateY(-50%);
+            top: -2px;
+        }
+        & span {
+            @include flex;
+            @include al-i(center);
+            width: 100%;
+            height: 100%;
+            padding-left: 19px;
+            padding-right: 25px;
+        }
+        & .option {
+            padding: 10px;
+        }
+    }
+    &__form-footer {
+        @include flex;
+        @include al-i(center);
+    }
+    &__btn {
+        width: 247px;
+        height: 55px;
+        background-color: #ff5800;
+        border-radius: 3px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #ffffff;
+        margin-right: 33px;
+        & i {
+            font-size: 8px;
+            margin-left: 16px;
+        }
+        &:hover {
+            background-color: #de4d00;
+        }
+    }
+    &__hint {
+        font-size: 11px;
+        line-height: 15px;
+        font-weight: 400;
+        color: #1d1d1b;
+    }
+    &__agree {
+        font-size: 10px;
+        line-height: 14px;
+        font-weight: 400;
+        color: #494949;
+        margin-top: 20px;
+        & a {
+            color: #456a92;
+        }
+    }
+}
+
+.modal2 {
+    & .modal-dialog {
+        width: 550px;
+    }
+    & .modal-content {
+        border-radius: 5px;
+        position: relative;
+        border: none;
+        box-shadow: none;
+    }
+    & .modal-body {
+        padding: 0;
+        @include flex;
+    }
+    &__close {
+        z-index: 1051;
+        top: 21px;
+        right: 21px;
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        opacity: 0.5;
+        & svg {
+            .cls-1 {
+                fill: #18293b;
+            }
+        }
+        &:hover {
+            opacity: 1;
+        }
+        & span {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__left {
+        padding-top: 43px;
+        padding-bottom: 127px;
+        text-align: center;
+        width: 164px;
+        background-color: #ff5800;
+    }
+    &__right {
+        width: 386px;
+        padding-left: 46px;
+        padding-top: 43px;
+        padding-right: 53px;
+    }
+    &__title {
+        letter-spacing: -0.5px;
+        font-size: 26px;
+        font-weight: 800;
+        color: #ff5800;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(#47748a, 0.21);
+    }
+    &__desc {
+        margin-top: 15px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #222222;
+    }
+    &__close2 {
+        font-size: 13px;
+        font-weight: 400;
+        color: #1e3b5a;
+        margin-top: 21px;
+        padding-bottom: 3px;
+        border-bottom: 1px dashed #1e3b5a;
+        &:hover {
+            border-color: transparent;
+        }
+    }
+}
+
+.star {
+    color: #e07b7b;
+}
+
+.modal-backdrop.in {
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+    .modal1,
+    .modal2 {
+        & .modal-dialog {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .modal1 {
+        & .modal-dialog {
+            width: calc(100% - 14px);
+            max-width: 540px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__close {
+            & svg {
+                width: 14px;
+                height: 14px;
+            }
+        }
+        &__title {
+            font-size: 18px;
+            padding-left: 25px;
+            padding-top: 24px;
+            padding-bottom: 19px;
+        }
+        & form {
+            padding: 20px 25px;
+        }
+        & label {
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+        & input {
+            height: 35px;
+            font-size: 12px;
+            padding: 0 14px;
+        }
+        &__inputs {
+            @include wrap;
+            & div {
+                width: 100% !important;
+            }
+        }
+        &__input {
+            margin-bottom: 16px;
+        }
+        & .nice-select {
+            margin-bottom: 16px;
+            height: 35px;
+            font-size: 12px;
+            & span {
+                padding: 0 14px;
+            }
+        }
+        & textarea {
+            padding: 3px 14px;
+        }
+        &__form-footer {
+            @include wrap;
+        }
+        &__btn {
+            width: 204px;
+            height: 43px;
+            font-size: 11px;
+        }
+        &__hint {
+            width: 100%;
+            margin-top: 15px;
+            & br {
+                display: none;
+            }
+        }
+        &__agree {
+            font-size: 8px;
+            line-height: 12px;
+            margin-top: 15px;
+        }
+    }
+    .modal2 {
+        &__close {
+            & svg {
+                width: 14px;
+                height: 14px;
+            }
+        }
+        & .modal-dialog {
+            width: calc(100% - 14px);
+            max-width: 540px;
+            height: 212px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__title {
+            font-size: 18px;
+            padding-bottom: 19px;
+            letter-spacing: 0;
+        }
+        &__left {
+            padding-top: 25px;
+            padding-bottom: unset;
+            width: 24%;
+            & svg {
+                width: 38px;
+                height: 29px;
+            }
+        }
+        &__right {
+            width: 76%;
+            padding-top: 25px;
+            padding-left: 21px;
+            padding-right: 24px;
+            padding-bottom: 31px;
+        }
+        &__desc {
+            font-size: 11px;
+            line-height: 16px;
+        }
+        &__close2 {
+            font-size: 11px;
+            margin-top: 14px;
+        }
+    }
+}

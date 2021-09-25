@@ -1,0 +1,105 @@
+.error404 {
+    padding-top: 108px;
+    padding-bottom: 160px;
+    border-top: 1px solid #bec1c4;
+    &__inner {
+        @include flex;
+    }
+    &__left {
+        position: relative;
+        margin-left: 32px;
+        width: 458px;
+        margin-right: 58px;
+        & img {
+            &:last-child {
+                position: absolute;
+                left: 50px;
+                top: 0;
+                width: 362px;
+            }
+        }
+    }
+    &__right {
+        width: 492px;
+    }
+    &__title {
+        margin-top: 6px;
+        font-size: 38px;
+        font-weight: 700;
+        color: #34323d;
+        padding-bottom: 32px;
+        border-bottom: 2px solid #ff5800;
+    }
+    &__desc {
+        margin-top: 30px;
+        & p {
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 400;
+            color: #34323d;
+            &:last-child {
+                margin-top: 23px;
+            }
+        }
+    }
+    &__back-link {
+        margin-top: 39px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .error404 {
+        padding-top: 70px;
+        padding-bottom: 88px;
+        &__inner {
+            @include wrap;
+        }
+        &__right {
+            margin-top: 140px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .error404 {
+        padding-top: 35px;
+        padding-bottom: 44px;
+        &__left {
+            width: unset;
+            margin: 0;
+            & img {
+                &:first-child {
+                    width: 225px;
+                }
+                &:last-child {
+                    width: 182px;
+                    left: 24px;
+                    top: -3px;
+                }
+            }
+        }
+        &__right {
+            width: unset;
+            margin-top: 67px;
+        }
+        &__title {
+            font-size: 22px;
+            padding-bottom: 17px;
+            border-width: 1px;
+        }
+        &__desc {
+            margin-top: 18px;
+            width: 266px;
+            & p {
+                font-size: 12px;
+                line-height: 18px;
+                &:last-child {
+                    margin-top: 18px;
+                }
+            }
+        }
+        &__back-link {
+            margin-top: 21px;
+        }
+    }
+}
